@@ -10,6 +10,7 @@ import _sodium from 'libsodium-wrappers'; // https://github.com/jedisct1/libsodi
 import concatTypedArray from 'concat-typed-array';
 
 const KEY_HEX = process.env.KEY_HEX ?? '';
+const ENCRYPTED_INPUT_STRING = process.env.ENCRYPTED_INPUT_STRING ?? '';
 
 (async () => {
   await _sodium.ready;
@@ -95,7 +96,7 @@ const KEY_HEX = process.env.KEY_HEX ?? '';
     return btoa(binary.join(''));
   }
 
-  var inputStr = 'shhh this is a secret';
+  var inputStr = ENCRYPTED_INPUT_STRING;
   console.log('inputStr', inputStr);
   var garbledStr = encrypt(inputStr, key);
   console.log('garbledStr', garbledStr);
