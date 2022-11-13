@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "encrypt": "ts-node src/encrypt.ts",
+    "hash": "ts-node src/hash.ts"
   },
   "type": "module",
   "dependencies": {
@@ -9,7 +10,8 @@
     "dotenv": "^16.0.3",
     "libsodium-wrappers": "0.7.9",
     "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "winston": "^3.8.2"
   },
   "prettier": "@nearfoundation/near-prettier-config",
   "devDependencies": {

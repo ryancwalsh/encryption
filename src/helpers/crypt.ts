@@ -1,3 +1,4 @@
+import { createHash } from 'crypto';
 import { SodiumHelper } from './libsodium';
 import { convertToHex } from './string.js';
 
@@ -31,4 +32,9 @@ export async function hashAsync(algo: string, str: string): Promise<string> {
   return crypto.subtle.digest(algo, utf8EncodedStr).then((arrayBuffer) => {
     return convertToHex(arrayBuffer);
   });
+}
+
+export function getSha256Hash(string: string): string {
+  // https://remarkablemark.org/blog/2021/08/29/javascript-generate-sha-256-hexadecimal-hash/
+  return createHash('sha256').update(string).digest('hex');
 }
