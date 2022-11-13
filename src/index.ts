@@ -8,21 +8,25 @@ import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-
 dotenv.config();
 
 const KEY_HEX = process.env.KEY_HEX ?? '';
-const ENCRYPTED_INPUT_STRING = process.env.ENCRYPTED_INPUT_STRING ?? '';
+const ENCRYPTED = process.env.ENCRYPTED ?? '';
+const PLAINTEXT = process.env.PLAINTEXT ?? '';
 
 (async () => {
   const fullSodiumHelper = await sodiumHelper();
   const slimCryptHelper = new SlimCryptHelper(fullSodiumHelper, KEY_HEX);
 
-  var inputStr = ENCRYPTED_INPUT_STRING;
-  console.log('inputStr', inputStr);
-  var garbledStr = slimCryptHelper.encrypt(inputStr);
-  console.log('garbledStr', garbledStr);
+  const plaintextStringFromFile = PLAINTEXT;
+  console.log('plaintextStringFromFile', plaintextStringFromFile);
+  const encryptedString = slimCryptHelper.encrypt(plaintextStringFromFile);
+  console.log('encryptedString', encryptedString);
   try {
-    var decryptedStr = slimCryptHelper.decrypt(garbledStr);
+    const decryptedStr = slimCryptHelper.decrypt(encryptedString);
     console.log('Recovered input string:', decryptedStr);
-    console.log('Check whether the following text matches the original:', decryptedStr === inputStr);
-  } catch (e) {
-    console.error(e);
+    console.log('Check whether the following text matches the original:', decryptedStr === plaintextStringFromFile);
+    const decryptedStringFromFile = slimCryptHelper.decrypt(ENCRYPTED);
+    console.log({ decryptedStringFromFile, ENCRYPTED });
+    console.error('WARNING! Consider the security risk of console history input and output.');
+  } catch (error) {
+    console.error(error);
   }
 })();
