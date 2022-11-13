@@ -1,12 +1,21 @@
+// Run via `yarn start`.
+
+// @ts-nocheck
+// TODO: Remove @ts-nocheck
 'use strict';
-console.log('https://github.com/jedisct1/libsodium.js');
-const _sodium = require('libsodium-wrappers');
-const concatTypedArray = require('concat-typed-array');
+import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config();
+
+import _sodium from 'libsodium-wrappers'; // https://github.com/jedisct1/libsodium.js
+import concatTypedArray from 'concat-typed-array';
+
+const KEY_HEX = process.env.KEY_HEX ?? '';
+
 (async () => {
   await _sodium.ready;
   const sodium = _sodium;
   const nonceBytes = sodium.crypto_aead_xchacha20poly1305_ietf_NPUBBYTES;
-  let key = sodium.from_hex('724b092810ec86d7e35c9d067702b31ef90bc43a7b598626749914d6a3e033ed');
+  let key = sodium.from_hex(KEY_HEX);
   var nonceTest;
 
   /**
@@ -78,7 +87,7 @@ const concatTypedArray = require('concat-typed-array');
 
   function u_btoa(buffer) {
     //https://stackoverflow.com/a/43271130/
-    var binary = [];
+    var binary: any[] = [];
     var bytes = new Uint8Array(buffer);
     for (var i = 0, il = bytes.byteLength; i < il; i++) {
       binary.push(String.fromCharCode(bytes[i]));
