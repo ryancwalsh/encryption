@@ -2,18 +2,23 @@
 // https://stackoverflow.com/a/55263004/
 
 export function getBufferFromHexString(ascii: string): Uint8Array {
-  const bytes = window.atob(ascii); // only works in browser
-  return Uint8Array.from(bytes, (c) => c.charCodeAt(0));
+  // TODO: Check this Copilot code.
+  const hex = ascii.replace(/[^0-9a-f]/gi, '');
+  const bytes = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < hex.length; i += 2) {
+    bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+  }
+  return bytes;
 }
 
 export function getHexStringFromBuffer(buffer: Uint8Array): string {
-  const binary = [];
-  const bytes = new Uint8Array(buffer);
-  for (let i = 0, il = bytes.byteLength; i < il; i += 1) {
-    binary.push(String.fromCharCode(bytes[i]));
-  }
-  return window.btoa(binary.join('')); // only works in browser
+  // TODO: Check this Copilot code.
+  const hex = Array.from(buffer)
+    .map((byte) => byte.toString(16).padStart(2, '0'))
+    .join('');
+  return hex;
 }
+
 // --------------------------------------------------------------
 
 export function convertToHex(arrayBuffer: ArrayBuffer): string {

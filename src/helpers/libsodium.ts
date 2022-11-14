@@ -89,7 +89,10 @@ export default async function sodiumHelper(): Promise<SodiumHelper> {
 
     async deriveKey(passwordPlainText: string, salt: string): Promise<string> {
       // Similar to https://github.com/paragonie/sodium-plus/blob/master/docs/SodiumPlus/password-based-key-derivation.md#example-for-crypto_pwhash
-      const saltArray = getBufferFromHexString(salt);
+      // console.log('crypto_pwhash_SALTBYTES', sodium.crypto_pwhash_SALTBYTES);
+      const saltArray = getBufferFromHexString(salt); //const saltArray = await sodium.randombytes_buf(16);
+      // const saltHex = getHexStringFromBuffer(saltArray);
+      // console.log({ saltArray, saltHex });
 
       const derivedKey = sodium.crypto_pwhash(
         sodium.crypto_aead_xchacha20poly1305_IETF_KEYBYTES,
