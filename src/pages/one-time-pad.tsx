@@ -6,7 +6,8 @@ import '../helpers/styles.scss';
 
 // These default values are just samples (not real values):
 const sampleKey = '110_YNKNBWRKOEHXKPZJYXQWDZXGCHMTQEQWRWURQEAEKKZQGSWUMIDGXGRWURQEAEKKZQGSWSMJGMQEQUYSHECWKRGJZTQDIUMIDGXGPNAFZ_';
-const sampleEncryptedString = 'YWRqBQ0cCgoAEhEEDAoGDBgeGwEfFBABBQ0dFAIcGRECDRATAQIFAgUMBgAcBBYXd2RuZRsGCAQQBh8aAxcdEwINChsXGB8HGBAIC3d+ZnwQGx4WChARBBgdCQ0bBwEB';
+const sampleEncryptedString =
+  'MFSGUBINDQFAUAASCECAYCQGBQMB4GYBD4KBAAIFBUORIAQ4DEIQEDIQCMAQEBICAUGAMAA4AQLBO53ENZSRWBQIAQIAMHY2AMLR2EYCBUFBWFYYD4DRQEAIBN3X4ZT4CANR4FQKCAIQIGA5BEGRWBYBAE======';
 
 /**
  * Takes an array of BIP-39 words and returns an object with the first 4 characters of each word as the key and the full word as the value.
@@ -163,6 +164,7 @@ const IndexPage: React.FC<PageProps> = ({ data }: { data: any }) => {
           </div>
         </li>
         <li>
+          {/* // TODO: Instead of asking for a key, ask for answers to personal questions, and concatenate the answers together and convert to uppercase and then use a PBKDF (with lots of iterations) to create a long key. */}
           Type the <strong>key</strong> here (replacing the demo value):
           <div>
             <textarea
