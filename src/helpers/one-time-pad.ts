@@ -17,14 +17,16 @@ function xorStrings(a: string, b: string): string {
   return decoder.decode(result);
 }
 
-export function encrypt(plaintext: string, key: string): string {
+function encrypt(plaintext: string, key: string): string {
   const encrypted = xorStrings(plaintext, key);
   const base64Encoded = btoa(encrypted);
   return base64Encoded;
 }
 
-export function decrypt(ciphertext: string, key: string): string {
+function decrypt(ciphertext: string, key: string): string {
   const decodedCiphertext = atob(ciphertext);
   const decrypted = xorStrings(decodedCiphertext, key);
   return decrypted;
 }
+
+export { encrypt, decrypt };

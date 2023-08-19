@@ -5,8 +5,8 @@ import { decrypt } from '../helpers/one-time-pad';
 import '../helpers/styles.scss';
 
 // These default values are just samples (not real values):
-const sampleKey = 'v_ifUKW5JewTVWCGRLraRSZC-aDoTrL3E1qRtWj2fwEVoSH8dWlXlwTihYGpdsL6PZJebIG6aK_xXf7rNhtRsvIXeZ1292D8zX7ihJ1p0fbacPfUNjKuNj48N5exGHr2';
-const sampleEncryptedString = 'JgozPAEZFnEIIDQbFRgNEwECMyoUHxsVbDYBPBUmGHYWeTAWJwI6YjI+AhM4HAR+VGBVaDo4GCogGAo9MjYAYBMSCzUvAB9iLggaOWhVAEsPJjMXMSMbCzYVf3V4YRR9';
+const sampleKey = '110_YNKNBWRKOEHXKPZJYXQWDZXGCHMTQEQWRWURQEAEKKZQGSWUMIDGXGRWURQEAEKKZQGSWSMJGMQEQUYSHECWKRGJZTQDIUMIDGXGPNAFZ_';
+const sampleEncryptedString = 'YWRqBQ0cCgoAEhEEDAoGDBgeGwEfFBABBQ0dFAIcGRECDRATAQIFAgUMBgAcBBYXd2RuZRsGCAQQBh8aAxcdEwINChsXGB8HGBAIC3d+ZnwQGx4WChARBBgdCQ0bBwEB';
 
 /**
  * Takes an array of BIP-39 words and returns an object with the first 4 characters of each word as the key and the full word as the value.
