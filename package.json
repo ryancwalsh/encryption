@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "export_to_single_file": "yarn tsc --skipLibCheck export_entire_app_to_single_html_file.ts && yarn node export_entire_app_to_single_html_file.js && rm export_entire_app_to_single_html_file.js && code public/main.html"
   },
   "dependencies": {
     "@babel/register": "^7.18.9",
@@ -39,6 +40,7 @@
     "@types/react-dom": "^18.0.8",
     "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "prettier": "@nearfoundation/near-prettier-config"
