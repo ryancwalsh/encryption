@@ -89,6 +89,7 @@ function ResultTable({ decryptedString, wordObject }: { decryptedString: string;
 const IndexPage: React.FC<PageProps> = ({ data }: { data: any }) => {
   const words = data.file.childPlainText.content.split('\n');
   const wordObject = generateObjectFromWords(words);
+  console.log({ words, wordObject });
 
   // These default values are just samples (not real values):
   const [key, setKey] = React.useState(sampleKey);
