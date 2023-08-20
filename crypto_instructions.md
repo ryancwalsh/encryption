@@ -1,6 +1,8 @@
 # Every few months, it's important to read at least this sentence:
 
-**These instructions for accessing our cryptocurrencies (written 2023-08-20 and currently valued at >$11k USD) are saved to [this recurring Google Calendar reminder](https://calendar.google.com/calendar/u/0/r/eventedit/MW9oM2V2NzMzMnBkNjQ2bDZucDRkcWd2bDdfMjAyMzA4MjBUMTQwMDAwWiByY3dhbHNoQG0) (https://calendar.google.com/calendar/u/0/r/search?q=crypto%20important), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
+**These instructions for accessing our cryptocurrencies are saved to our shared Bitwarden account and to a shared [Google Drive document](https://drive.google.com/file/d/1uRjbEuwSrGPhYyQA3KPuvtYA96fxl1JE/view?usp=drive_link), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
+
+Remember also: https://tools.ryancwalsh.com/codes
 
 If you can remember that, then even if Softwood burns down (and therefore our hardware wallet is destroyed) and even if we lose access to our Google account and Google Calendar and even Bitwarden, you can still access the crypto.
 
@@ -10,9 +12,13 @@ We just need, either:
 - access to Jim's safe deposit box, or…
 - any fresh new hardware wallet + our hardware wallet's seed phrase, stored in encrypted form in shared Bitwarden (and Bitwarden itself is always encrypted too), decrypted using Ryan's knowledge
 
-(By the way, this document is written in a text language called Markdown. So if you open this text in a Markdown reader such as https://stackedit.io/app or https://www.zettlr.com, it will be formatted nicer.)
+Written 2023-08-20.
 
-Remember also: https://tools.ryancwalsh.com/codes
+$11k+ USD is the current value of the crypto on the hardware wallet (or rather, "associated with the seed phrase that the hardware wallet generated"). Ryan will transfer much more to the hardware wallet from Binance and Coinbase soon, now that we have these instructions written out and are at less risk for losing access to the crypto.
+
+(By the way, this document is written in a text language called Markdown. So if you open this text in a Markdown reader such as https://www.zettlr.com, it will be formatted nicer. You might want to download and install Zettlr now because a lot of this document will require that you unplug your router and stay offline.)
+
+Also note if you're reading these instructions within [this recurring Google Calendar reminder](https://calendar.google.com/calendar/u/0/r/eventedit/MW9oM2V2NzMzMnBkNjQ2bDZucDRkcWd2bDdfMjAyMzA4MjBUMTQwMDAwWiByY3dhbHNoQG0) (https://calendar.google.com/calendar/u/0/r/search?q=crypto%20important), you're not seeing the full document, because Google Calendar truncated it.
 
 ---
 
@@ -191,17 +197,21 @@ touch secret_answers.txt
 5. Type into it this practice/sample encrypted PIN: KUZEM43EI5LGWWBRHBRFU2SXGRUVAWTJMJKFU5SWGEZECYTFKVHUWYLYGZSDQMZUGBXUKPIK (Later, when you want to do this for real, you'll type in the encrypted PIN from our safe or shared Bitwarden.)
 6. Open the file `secret_answers.txt` in a text editor.
 7. Type the answers (one answer per line). Save the file.
-    - To practice, pretend that the questions are:
-       1. What is the first color in the rainbow? (red)
-       2. What planet do we live on? (Earth)
-       3. What is one plus two? (three)
+   - To practice, pretend that the questions are:
+     1. What is the first color in the rainbow? (red)
+     2. What planet do we live on? (Earth)
+     3. What is one plus two? (three)
+
 So, for practice, make your `secret_answers.txt` file look like this:
+
 ```
 red
 Earth
 three
 ```
+
 When you want to do this for real, find the real instructions in the safe. Hopefully the answers to those questions are only in Katie's and Ryan's minds.
+
 8. Paste the following commands into your terminal:
 
 ```bash
