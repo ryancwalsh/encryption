@@ -215,12 +215,36 @@ When you want to do this for real, find the real instructions in the safe. Hopef
 8. Paste the following commands into your terminal:
 
 ```bash
-# Read the contents of the file named `secret_answers.txt`, removing any newline characters from the text, and converting all lowercase characters to uppercase, and store the result in the variable `passphrase`:
+# Read the contents of the file named `secret_answers.txt`,
+# removing any newline characters
+# from the text, and converting all lowercase characters
+# to uppercase, and store the result
+# in the variable `passphrase`:
 passphrase=$(tr -d '\n' < secret_answers.txt | tr '[:lower:]' '[:upper:]')
-# Decode the contents of the `encrypted_message.txt` file using Base32 encoding. The decoded (but not yet decrypted) data is then passed through the `openssl` command to decrypt it. The decryption is performed using the AES-256-CBC cipher mode. AES (Advanced Encryption Standard) is a widely used encryption algorithm. CBC (Cipher Block Chaining) is a mode of operation for block ciphers. The `-base64` flag indicates that the input data must also have been encoded in base64 format (in addition to the base32 encoding). The decryption key is provided using the `-pass` option along with the `pass:"$passphrase"` argument. This is where the passphrase generated earlier is used as the decryption key. The `-iter` flag specifies the number of iterations for the key derivation function. In this case, it's set to 100,000,000 iterations.
-# This command will finish in less than 60 seconds on most computers:
+# Decode the contents of the `encrypted_message.txt` file using
+# Base32 encoding.
+# The decoded (but not yet decrypted) data is then passed
+# through the `openssl` command to decrypt it.
+# The decryption is performed using the AES-256-CBC cipher mode.
+# AES (Advanced Encryption Standard) is a widely used encryption
+# algorithm.
+# CBC (Cipher Block Chaining) is a mode of operation for block
+# ciphers.
+# The `-base64` flag indicates that the input data must
+# also have been encoded in base64 format
+# (in addition to the base32 encoding).
+# The decryption key is provided using the `-pass` option along
+# with the `pass:"$passphrase"` argument.
+# This is where the passphrase generated earlier is used as the
+# decryption key.
+# The `-iter` flag specifies the number of iterations for the key
+# derivation function.
+# In this case, it's set to 100,000,000 iterations.
+# This command will finish in less than 60 seconds on most
+# computers:
 time base32 -d encrypted_message.txt | \
- openssl enc -aes-256-cbc -base64 -pass pass:"$passphrase" -iter 100000000 -d > secret_output.txt
+ openssl enc -aes-256-cbc -base64 -pass pass:"$passphrase" \
+ -iter 100000000 -d > secret_output.txt
 ```
 
 9. Now go read `secret_output.txt`. Now you know our PIN! 🎉 (In the practice round, you should see this fake PIN: 87654321.) You can write it down on paper (which you will soon shred).
