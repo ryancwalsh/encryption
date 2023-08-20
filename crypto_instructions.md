@@ -1,14 +1,24 @@
 # Every few months, it's important to read at least this sentence:
 
-**These instructions for accessing our cryptocurrencies (written 2023-08-13 and currently valued at >$13k USD) are saved to [this recurring Google Calendar reminder](https://calendar.google.com/calendar/u/0/r/eventedit/MW9oM2V2NzMzMnBkNjQ2bDZucDRkcWd2bDdfMjAyMzA4MjBUMTQwMDAwWiByY3dhbHNoQG0), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
+**These instructions for accessing our cryptocurrencies (written 2023-08-20 and currently valued at >$11k USD) are saved to [this recurring Google Calendar reminder](https://calendar.google.com/calendar/u/0/r/eventedit/MW9oM2V2NzMzMnBkNjQ2bDZucDRkcWd2bDdfMjAyMzA4MjBUMTQwMDAwWiByY3dhbHNoQG0) (https://calendar.google.com/calendar/u/0/r/search?q=crypto%20important), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
 
-If you can remember that, then even if Softwood burns down and even if we lose access to our Google account and Google Calendar, you can still access the crypto.
+If you can remember that, then even if Softwood burns down (and therefore our hardware wallet is destroyed) and even if we lose access to our Google account and Google Calendar and even Bitwarden, you can still access the crypto.
+
+We just need, either:
+
+- the hardware wallet (in Softwood safe) + the PIN (printed in encrypted form in Softwood safe, decrypted using Katie's knowledge), or...
+- Jim's safe deposit box, or…
+- the hardware wallet's seed phrase, stored in encrypted form in shared Bitwarden (and Bitwarden itself is always encrypted too), decrypted using Ryan's knowledge
 
 (By the way, this document is written in a text language called Markdown. So if you open this text in a Markdown reader such as https://stackedit.io/app or https://www.zettlr.com, it will be formatted nicer.)
 
+Remember also: https://tools.ryancwalsh.com/codes
+
 ---
 
-# How crypto custody works
+# Background info / context about crypto
+
+## How crypto custody works
 
 I'll explain 4 different approaches to custody of financial assets, first starting with how non-crypto financial assets work.
 
@@ -76,7 +86,7 @@ Many experts would recommend Approach 3 instead of Approach 4.
 
 **seed phrase:** When you set up a hardware wallet, you get a random 24-word seed phrase, which is like a secret key with which an owner controls their crypto. See **Important** section below!!
 
-You should write a second copy of the hardware wallet's 24-word seed phrase (as a backup) but be extra careful to keep the original copy and the backups private. (Side note: [Cryptosteel](https://cryptosteel.com/) is another cool way to store a seed phrase, but I haven't done it.)
+Someone who owns crypto should write a second copy of their hardware wallet's 24-word seed phrase (as a backup) but be extra careful to keep the original copy and the backups private. (Side note: [Cryptosteel](https://cryptosteel.com/) is another cool way to store a seed phrase, but I haven't done it.)
 
 You can think of your non-custodial wallet as a transparent lockbox with a hole in the top that allows people to deposit funds _into_ the lockbox (as long as they know its address). But _only you_ are allowed to open the lockbox to retrieve what's inside because only you know the seed phrase.
 
@@ -110,25 +120,29 @@ The seed phrase should only ever exist in written form. Never type it onto a com
 
 ---
 
+---
+
 # Scenarios
 
-For any scenario where Ryan is unavailable, consider getting help from a family member or friend who is very tech-savvy _and_ is someone you'd trust both not to steal our crypto and to be careful with all of the secrets involved.
+Normally, Ryan is available, and in those cases, Ryan will use his Ubuntu laptop to open the Ledger Live app, plug in the Ledger USB device, and type the PIN into the device.
+
+For any scenario where Ryan is unavailable (described below), consider getting help from a family member or friend who is very tech-savvy _and_ is someone you'd trust both not to steal our crypto and to be careful with all of the secrets involved.
+
+1.  Do not start doing any of these steps until you've read this _whole_ document at least one time carefully beforehand.
+2.  Buy a brand new Ledger hardware wallet, even if you still own our original one. It's ideal to practice on a fresh one first. The cost of a new Ledger (and the wait for shipping) is worthwhile.
+3.  Find someone you trust who knows how to teach you all about Ledger hardware wallets and Ledger Live software on your computer.
+4.  Have them teach you and show you and monitor you (with this fresh new Ledger hardware wallet that you're practicing on) where you will be using it and learning how it works and how to log in and move funds off of it.
+    - If they are good enough at this step, you will be able to proceed with all of the following steps without their presence, which would be ideal so that they are not in a position to copy (steal) our seed phrase (and therefore all of the assets). But if you fully trust them and really do need their help below, that's your call.
+5.  Disconnect from wifi, unplug all USB devices, and disconnect any networking cables.
+    - (You want to be sure that no devices are snooping.)
+6.  Remember: never let anybody see what you're about to do (unless you fully trust them not to take note of these details so that they can steal our assets one day).
+    - Someone having a copy of these details is as bad as if they now fully owned our crypto and you no longer own it at all.
+    - Ensure that nobody else is in the room.
+    - NEVER take a photo of the results that you're about to see. Photos (especially digital ones) too easily get found, especially by bots.
 
 For extra assurance (and so that you have a record of what you're all doing during this stressful time and won't need to rely only on your memory), ensure that there is a screen recording capturing their activity and that you're also recording with a handheld camera (e.g. your phone) so that you can capture from another perspective, including what they do on the hardware device (but maybe cover the lens whenever they're typing something sensitive into the hardware device such as a PIN or seed phrase).
 
-## Scenario 1 (Ryan is available)
-
-Ryan will use his Ubuntu laptop to open the Ledger Live app, plug in the Ledger USB device, and type the PIN into the device. See the "Ledger" note in Ryan's shared Bitwarden, which mentions a hint for the PIN.
-TODO: Create a better hint.
-TODO: Save https://calendar.google.com/calendar/u/0/r/eventedit/MW9oM2V2NzMzMnBkNjQ2bDZucDRkcWd2bDdfMjAyMzA4MjBUMTQwMDAwWiByY3dhbHNoQG0 link to shared Bitwarden hint.
-
-## Scenario 2 (Ryan is available but forgets the PIN)
-
-Ryan will use the handwritten 24-word seed phrase written on a card stored in the Softwood safe.
-
-## Scenario 3 (Ryan is unavailable but you still have our Ledger hardware wallet)
-
-See the "Ledger" note in Ryan's shared Bitwarden, which mentions a hint for the PIN. If you think you can figure it out, continue. Otherwise, read the directions about retrieving the seed phrase.
+## Scenario 1 (You still have our Ledger hardware wallet)
 
 - If you can log into Ryan's Ubuntu laptop
   - Open the Terminal.
@@ -137,102 +151,92 @@ See the "Ledger" note in Ryan's shared Bitwarden, which mentions a hint for the 
 - Otherwise:
   - Only do this on your own computer or on the computer of someone you trust not to steal the crypto (NOT on a public computer): Find some way to open a fresh copy of a Ledger Live app.
 
-Plug in the Ledger USB device, and type the PIN into the device.
+Plug in the Ledger USB device, and type the PIN into the device. See below about how to get the PIN.
 
-## Scenario 4 (Ryan and our Ledger hardware wallet are both unavailable)
+## Scenario 2 (Our Ledger hardware wallet was destroyed)
 
-### If our Ledger hardware wallet was destroyed
+No worries. You'll just buy a new one, which above I said you should do anyway for practice purposes (so that an expert can first show you how things work while using an empty and unimportant Ledger). Continue with the steps of Scenario 3, skipping anything that mentions using Ryan's PIN, which would not exist on a fresh new Ledger. You'll still be able to access our crypto as long as you still know the 24-word seed phase.
 
-No worries. Buy a new one. Continue with the steps of Scenario 3, skipping anything that mentions using Ryan's PIN, which would not exist on a fresh new Ledger. You'll still be able to access our crypto as long as you still know the 24-word seed phase.
-
-### If our Ledger hardware wallet got misplaced
+## Scenario 3 (Our Ledger hardware wallet got misplaced)
 
 This is similar to the "destroyed" case above. However, since there is a chance that a stranger might find the hardware wallet, it's not great that they're only an 8-character PIN away from being able to control it.
 
 So, as soon as you can, you'll want to:
 
 1. Buy a new hardware wallet.
-2. Set a totally different PIN for it.
+2. Set a totally different PIN for it. Do _not_ use the same PIN as mentioned in this document.
 3. Use the seed phrase to "restore" all of our crypto onto it.
 4. For each non-custodial wallet on there (which is probably just 1 for Bitcoin, 1 for Ethereum, etc), you'll want to create a _new_ non-custodial wallet for that same cryptocurrency and make a transfer of all assets from the old wallet to the new one. This way, even if a stranger finds your old hardware wallet _and_ somehow guesses the 8-character PIN, they'll then see only empty wallets. They won't have access to the new wallets that you've moved the funds to.
 
-# Useful links
-
-- https://www.ledger.com/academy/bip-39-the-low-key-guardian-of-your-crypto-freedom
-- https://www.ledger.com/academy
-- https://www.blockplate.com/pages/first-4-letters-of-a-bip39-mnemonic-seed-phrase
-
-# Retrieving the seed phrase for our Ledger hardware wallet
-
-## Prep (carefully read this section)
-
-1.  Do not start doing any of these steps until you've read ALL of them at least one time carefully beforehand.
-2.  Buy a brand new Ledger hardware wallet, even if you still own our original one. It's ideal to practice on a fresh one first.
-3.  Find someone you trust who knows how to teach you all about Ledger hardware wallets and Ledger Live software on your computer.
-4.  Have them teach you and show you and monitor you (with this fresh new Ledger hardware wallet that you're practicing on) where you will be using it and learning how it works and how to log in and move funds off of it.
-    - If they are good enough at this step, you will be able to proceed with all of the following steps without their presence, which would be ideal so that they are not in a position to copy (steal) our seed phrase (and therefore all of the assets). But if you fully trust them and really do need their help below, that's your call.
-5.  Search our password manager for instructions.
-6.  Disconnect from wifi, unplug all USB devices, and disconnect any networking cables.
-    - (You want to be sure that no devices are snooping.)
-7.  Remember: never let anybody see what you're about to do (unless you fully trust them not to take note of these details so that they can steal our assets one day).
-    - Someone having a copy of these details is as bad as if they now fully owned our crypto and you no longer own it at all.
-    - Ensure that nobody else is in the room.
-    - NEVER take a photo of the results that you're about to see. Photos (especially digital ones) too easily get found, especially by bots.
-
-## Decrypting our seed phrase
+# Decrypting the PIN
 
 1. Remember to unplug ethernet and totally disable wifi until after you've finished this entire process.
 2. Open the Terminal app on an Ubuntu computer (MacOs might work too).
 3. Paste in the following commands:
 
 ```bash
+# Navigate to your home folder:
 cd ~
+# Create a new folder called "crypto_recovery" within your home folder:
 mkdir crypto_recovery
+# Navigate into that "crypto_recovery" subfolder:
 cd crypto_recovery
-touch answers.txt
+# Create a new empty text file called "encrypted_message.txt":
+touch encrypted_message.txt
+# Create a new empty text file called "secret_answers.txt":
+touch secret_answers.txt
 ```
 
-4. Open the file `answers.txt` in a text editor.
-5. Type the answers to the questions below, one answer per line. Save the file.
-
-   - We arrived at PVB and sat in the Adirondacks in time to see what dad misread as a **\_\_\_\_\_\_**
-   - Morely **\_\_\_\_\_\_**
-   - Prioritize **\_\_\_\_\_\_**
-
-6. Paste the following commands into your terminal:
-
-TODO: Figure out how to remove newlines from encryptedMessage.txt.
+4. Open the file `encrypted_message.txt` in a text editor.
+5. Type into it the encrypted PIN from our safe. Save it.
+    - To practice, write the following into `encrypted_message.txt` (to pretend this is the encrypted PIN): KUZEM43EI5LGWWBRHBRFU2SXGRUVAWTJMJKFU5SWGEZECYTFKVHUWYLYGZSDQMZUGBXUKPIK
+6. Read the instructions in the safe about questions and answers.
+7. Open the file `secret_answers.txt` in a text editor.
+8. Type the answers (one answer per line). Save the file.
+    - To practice, pretend that the questions are:
+       1. What is the first color in the rainbow? (red)
+       2. What planet do we live on? (Earth)
+       3. What is one plus two? (three)
+So, for practice, make your `secret_answers.txt` file look like this:
+```
+red
+Earth
+three
+```
+9. Paste the following commands into your terminal:
 
 ```bash
-echo "TODO_OUR_ACTUAL_ENCRYPTED_MESSAGE" > encryptedMessage.txt
-passphrase=$(tr -d '\n' < answers.txt | tr '[:lower:]' '[:upper:]')
-base32 -d encryptedMessage.txt | \
- openssl enc -aes-256-cbc -base64 -pass pass:"$passphrase" -iter 100000000 -d > delete_this_file_ASAP.txt
+# Read the contents of the file named `secret_answers.txt`, removing any newline characters from the text, and converting all lowercase characters to uppercase, and store the result in the variable `passphrase`:
+passphrase=$(tr -d '\n' < secret_answers.txt | tr '[:lower:]' '[:upper:]')
+# Decode the contents of the `encrypted_message.txt` file using Base32 encoding. The decoded (but not yet decrypted) data is then passed through the `openssl` command to decrypt it. The decryption is performed using the AES-256-CBC cipher mode. AES (Advanced Encryption Standard) is a widely used encryption algorithm. CBC (Cipher Block Chaining) is a mode of operation for block ciphers. The `-base64` flag indicates that the input data must also have been encoded in base64 format (in addition to the base32 encoding). The decryption key is provided using the `-pass` option along with the `pass:"$passphrase"` argument. This is where the passphrase generated earlier is used as the decryption key. The `-iter` flag specifies the number of iterations for the key derivation function. In this case, it's set to 100,000,000 iterations.
+# This command will finish in less than 60 seconds on most computers:
+time base32 -d encrypted_message.txt | \
+ openssl enc -aes-256-cbc -base64 -pass pass:"$passphrase" -iter 100000000 -d > secret_output.txt
 ```
 
-7. Now go read `delete_this_file_ASAP.txt`. Some words have been intentionally ommitted from the result, and in their place are numbers. For those lines, use the corresponding word based on the line number in the BIP-39 English standard shown at https://github.com/bitcoin/bips/blob/e643d247c8bc086745f3031cdee0899803edea2f/bip-0039/english.txt. Now you know our seed phrase! 🎉
-8. Delete that file as soon as you can. Be sure to delete the file from your trash too. Do this all before you ever connect this computer to the internet again.
+7. Now go read `secret_output.txt`. Now you know our PIN! 🎉 (In the practice round, you should see this fake PIN: 87654321.)
+8. Delete those files as soon as you can (encrypted_message.txt, secret_answers.txt, and secret_output.txt). Be sure to delete the files from your trash too. Do this all before you ever connect this computer to the internet again.
 
-### What those commands do:
-
-1. Create a file called encryptedMessage.txt, writing our encrypted seed phrase to it.
-
-2. Read the contents of the file named `answers.txt`, removing any newline characters from the text, and converting all lowercase characters to uppercase. The result is stored in the variable `passphrase`.
-
-3. Decode the contents of the `encryptedMessage.txt` file using Base32 encoding.
-
-4. The decoded (but not yet decrypted) data from step 3 is then passed through the `openssl` command to decrypt it. The decryption is performed using the AES-256-CBC cipher mode. AES (Advanced Encryption Standard) is a widely used encryption algorithm. CBC (Cipher Block Chaining) is a mode of operation for block ciphers. The `-base64` flag indicates that the input data must also have been encoded in base64 format (in addition to the base32 encoding).
-
-5. The decryption key is provided using the `-pass` option along with the `pass:"$passphrase"` argument. This is where the passphrase generated in step 2 is used as the decryption key. The `-iter` flag specifies the number of iterations for the key derivation function. In this case, it's set to 10,000,000 iterations.
-
-In summary, this script takes an encrypted message encoded in Base32, decrypts it using the AES-256-CBC cipher with a passphrase derived from the contents of `answers.txt`, and outputs the decrypted result. The script seems to prioritize security by using a strong encryption algorithm (AES-256-CBC) and performing a significant number of iterations during key derivation. The passphrase for decryption is obtained from `answers.txt` after removing newlines and converting to uppercase.
-
-### Commands I used to encrypt the seed phrase:
+## Commands Ryan used to encrypt the PIN:
 
 ```bash
-passphrase=$(tr -d '\n' < answers.txt | tr '[:lower:]' '[:upper:]')
+# This is the file where I write the plaintext PIN temporarily:
+vim secret_output.txt
+passphrase=$(tr -d '\n' < secret_answers.txt | tr '[:lower:]' '[:upper:]')
 # Using a fake seed phrase as an example:
-echo "PUZZTRADBECOCONTSNAKFLAVAWESATTESHADSUPPTIGEWOLF0790VOLCHAMMVELVCHAPMIXTOCEA0379ANGEBURSSONGASPE" | \
+time cat secret_output.txt | \
  openssl enc -aes-256-cbc -base64 -pass pass:"$passphrase" -iter 100000000 | \
- base32 > encryptedMessage.txt
+ base32 | tr -d '\n' > encrypted_message.txt
+rm secret_output.txt
 ```
+
+## If Ryan wants to decrypt the seed phrase
+
+See Bitwarden.
+
+# Useful links
+
+- https://www.ledger.com/academy/bip-39-the-low-key-guardian-of-your-crypto-freedom
+- https://www.ledger.com/academy
+- https://www.blockplate.com/pages/first-4-letters-of-a-bip39-mnemonic-seed-phrase
+- https://github.com/bitcoin/bips/blob/e643d247c8bc086745f3031cdee0899803edea2f/bip-0039/english.txt
