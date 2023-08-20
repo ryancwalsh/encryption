@@ -1,3 +1,5 @@
+# See [Crypto Instructions](crypto_instructions.md).
+
 This app is automatically deployed to https://ryancwalsh.github.io/encryption/
 
 1. `yarn install`
