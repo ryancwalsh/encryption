@@ -1,6 +1,6 @@
 # Every few months, it's important to read at least this sentence:
 
-**These instructions for accessing our cryptocurrencies are saved to our shared Bitwarden account and to a shared [Google Drive document](https://drive.google.com/file/d/1uRjbEuwSrGPhYyQA3KPuvtYA96fxl1JE/view?usp=drive_link), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
+**These instructions for accessing our cryptocurrencies are saved to our shared Bitwarden account and to a shared [Google Drive document](https://drive.google.com/file/d/1uRjbEuwSrGPhYyQA3KPuvtYA96fxl1JE/view), and printed copies exist in our safe at Softwood and in Jim's safe deposit box.**
 
 Remember also: https://tools.ryancwalsh.com/codes
 
@@ -9,10 +9,11 @@ If you can remember that, then even if Softwood burns down (and therefore our ha
 We just need, either:
 
 - our hardware wallet (in Softwood safe) + its PIN (printed in encrypted form in Softwood safe, decrypted using Katie's knowledge), or...
+- our 24-word seed phrase (handwritten on a Ledger card in Softwood safe), or...
 - access to Jim's safe deposit box, or…
 - any fresh new hardware wallet + our hardware wallet's seed phrase, stored in encrypted form in shared Bitwarden (and Bitwarden itself is always encrypted too), decrypted using Ryan's knowledge
 
-Written 2023-08-20.
+Written 2023-08-20. Updated 2023-09-10.
 
 $11k+ USD is the current value of the crypto on the hardware wallet (or rather, "associated with the seed phrase that the hardware wallet generated"). Ryan will transfer much more to the hardware wallet from Binance and Coinbase soon, now that we have these instructions written out and are at less risk for losing access to the crypto.
 
@@ -82,7 +83,7 @@ Many experts would recommend Approach 3 instead of Approach 4.
 
 **non-custodial wallet (‘software wallet’, ‘wallet’):** In what I called Approach 3, there is no such thing as an “account”. There are just wallets of digital cash (i.e. crypto). A wallet is kind of like a secret digital folder of files. But instead of files, inside is digital cash. One popular software wallet is MetaMask. But don't use software wallets. Only use a hardware wallet like a Ledger (which has its own protected software wallets inside).
 
-**hardware wallet:** Companies like Ledger and Trezor build hardware devices with which you can easily manage a huge number of non-custodial wallets in a safe way (such as with an easy-to-remember PIN). For simplicity (and since it's basically true for us), assume that you would own 1 hardware wallet which contains 1 non-custodial wallet per cryptocurrency that you care about. E.g. our Ledger hardware wallet contains 1 wallet for Bitcoin, 1 for Ethereum, 1 for NEAR, etc.
+**hardware wallet:** Companies like Ledger and Trezor build hardware devices with which you can easily manage a huge number of non-custodial wallets in a safe way (such as with an easy-to-remember PIN). They look like USB thumb drives but have a small screen and buttons and are basically a tiny computer. For simplicity (and since it's basically true for us), assume that you would own 1 hardware wallet which contains 1 non-custodial wallet per cryptocurrency that you care about. E.g. our Ledger hardware wallet contains 1 software wallet for Bitcoin, 1 for Ethereum, 1 for NEAR, etc.
 
 **public key:** The digital mailing address of your software wallet. I will call this the "address". Someone needs to know this address in order to send you crypto. You should share this publicly so that people can transfer you funds. (Weirdly, [NEAR](https://near.org/use/set-up-account) uses the word "account" to refer to this concept, so they're an exception to the terminology rule I stated above about "accounts" referring to only custodial wallets.) On public ledgers of cryptocurrencies (published to the internet for everyone to see), everyone can see every since transaction between any address and any other address. They can therefore also see the full contents (i.e. value) of each wallet.
 
@@ -111,15 +112,16 @@ You can think of your non-custodial wallet as a transparent lockbox with a hole 
 
 Be careful to keep the seed phrase private (don't share it with anyone).
 
-Whoever knows the seed phrase has full control over the crypto and could move it to an undisclosed location, stealing it from you.
+Whoever knows the seed phrase has full control over the crypto and could digitally move the assets from your wallets to their wallets, stealing it from you.
 
-The seed phrase should only ever exist in written form. Never type it onto a computer or any other device other than a hardware wallet (since hackers have written viruses to try to scrape seed phrases from your keyboard or hard drive). Never take a digital photo of a seed phrase (for the same reason).
+The seed phrase should only ever exist in written form. Never type it onto a computer or any other device other than a hardware wallet (since hackers have created viruses to try to scrape seed phrases from your keyboard or hard drive). Never take a digital photo of a seed phrase (for the same reason since hacker bots can even extract text or handwriting from photos).
 
 ## Recap
 
 - The more serious you are about crypto, the less you'll want to trust institutions to manage your crypto "keys" for you, so you'll want to have your own **non-custodial wallets**, preferably contained within a **hardware wallet** like a **Ledger Nano X**.
 - An 8-character **PIN** is a shortcut way of controlling one or more **non-custodial wallets** of crypto without needing to type in a full 24-word **seed phrase**.
 - Keep your hardware wallet seed phrase (and backups) and PIN **extremely private**.
+- It's true that the security of a PIN of merely 8 characters is far less than the security of a full 24-word (96-character) seed phrase. But see the next point.
 - The worst things to misplace or to let fall into the hands of adversaries are:
   1.  the seed phrase
   2.  physical possession of the hardware wallet + its PIN (if they get both, it's the equivalent of them discovering your seed phrase)
@@ -135,18 +137,31 @@ Normally, Ryan is available, and in those cases, Ryan will use his Ubuntu laptop
 For any scenario where Ryan is unavailable (described below), consider getting help from a family member or friend who is very tech-savvy _and_ is someone you'd trust both not to steal our crypto and to be careful with all of the secrets involved.
 
 1.  Do not start doing any of these steps until you've read this _whole_ document at least one time carefully beforehand.
-2.  Buy a brand new Ledger hardware wallet, even if you still posses our original one. It's ideal to practice on a fresh one first. The cost of a new Ledger (and the wait for shipping) is worthwhile.
-3.  Find someone you trust who knows how to teach you all about Ledger hardware wallets and Ledger Live software on your computer.
-4.  Have them teach you and show you and monitor you (with this fresh new Ledger hardware wallet that you're practicing on). You will be using it and learning how it works and how to log in and move funds off of it.
+    - Seriously, read this whole document at _least_ one time before you actually do _anything_.
+2.  You should probably also peruse many of the articles at https://www.ledger.com/academy. By browsing those guides, you'll at least get an additional perspective beyond what I've written here. That website will be able to answer a lot of your questions.
+3.  Buy a brand new Ledger hardware wallet, even if you still possess our original one. It's ideal to practice on a fresh one first. The $100-200 cost of a new Ledger (and the wait for shipping) is worthwhile.
+4.  Find someone you trust who knows how to teach you all about Ledger hardware wallets and Ledger Live software on your computer.
+5.  Have them teach you and show you and monitor you (with this fresh new Ledger hardware wallet that you're practicing on). You will be using it and learning how it works and how to log in and move funds off of it.
     - If they are good enough at this step, you will be able to proceed with all of the following steps without their presence, which would be ideal so that they are not in a position to copy (steal) our seed phrase (and therefore all of the assets). But if you fully trust them and really do need their help below, that's your call.
-5.  Disconnect from wifi, unplug all USB devices, and disconnect any networking cables. It would be even better to go unplug the router from the wall so that you don't accidentally enable wifi on your computer too soon.
-    - (You want to be sure that no devices are snooping.)
-6.  Remember: never let anybody see what you're about to do (unless you fully trust them not to take note of these details so that they can steal our assets one day).
+6.  Disconnect from wifi, unplug all networking equipment (such as any USB wifi dongles and ethernet cables). It would be even better to go unplug the router from the wall too so that you don't accidentally enable wifi on your computer too soon.
+    - (You want to be sure that no devices are snooping. Hackers have distributed viruses that "listen" for cryptocurrency seed phrases that you type on a device that is connected to the internet.)
+    - Katie calls this step: "Escape the internet." Other people have called it creating an "air gap" (which isn't a great name for it).
+7.  Remember: never let anybody see what you're about to do (unless you fully trust them not to take note of these details so that they can steal our assets one day).
     - Someone having a copy of these details is as bad as if they now fully owned our crypto and you no longer own it at all.
     - Ensure that nobody else is in the room.
     - NEVER take a photo of the results that you're about to see. Photos (especially digital ones) too easily get found, especially by bots.
 
-For extra assurance (and so that you have a record of what you're all doing during this stressful time and won't need to rely only on your memory), ensure that there is a screen recording capturing their activity and that you're also recording with a handheld camera (e.g. your phone) so that you can capture from another perspective, including what they do on the hardware device (but maybe cover the lens whenever they're typing something sensitive into the hardware device such as a PIN or seed phrase).
+## Keep detailed notes
+
+So that you have a record of what you're all doing during this stressful time and won't need to rely only on your memory, consider having an audio recorder running.
+
+Very descriptively narrate to the recorder every single action you're taking, whether on the computer or on the hardware wallet.
+
+But don't say secrets out loud (such as the PIN or seed phrase).
+
+This way, if you ever have a question about what you saw or what you did, you'll be able to go back and listen to the recording.
+
+Alternatively (or in addition), you could choose to write notes (still omitting secrets). But narrating to an audio recorder might feel more convenient.
 
 ## Scenario 1 (You still have our Ledger hardware wallet)
 
@@ -155,9 +170,14 @@ For extra assurance (and so that you have a record of what you're all doing duri
   - Open the Ledger Live app by running this command (without the backticks): `~/ledger_live/ledger-live-desktop-*.AppImage`
     - By the way, you can do this much (and see the USD value of our assets) all without needing to know the PIN or seed phrase.
 - Otherwise:
-  - Only do this on your own computer or on the computer of someone you trust not to steal the crypto (NOT on a public computer): Find some way to open a fresh copy of a Ledger Live app.
+  - Only do this on a computer that we own: Install a fresh copy of a Ledger Live app.
 
-Plug in the Ledger USB device, and type the PIN into the device. See below about how to get the PIN.
+Plug the Ledger hardware wallet into the USB port, and type the PIN into the Ledger. (See below about how to get the PIN.)
+
+> By the way, on 2023-09-10, Katie felt daunted when reading the "Decrypting the PIN" section below and asked whether instead she could just type the full 24-word seed phrase into the Ledger device.
+> No, it's best to go through my "Decrypting the PIN" steps.
+> Even though it's technically possible to do a factory-reset of the Ledger device, I recommend using the PIN instead because I think it's probably ideal to use the device the way that I have been since that's what I've been familiar with and have documented.
+> Keep in mind that https://support.ledger.com/hc/en-us/articles/4405737674129-Forgot-your-PIN-code-?support=true says “After three incorrect PIN code entries, Ledger hardware wallets reset to factory settings, erasing the private keys from their secure storage.” At that point, it would let you enter the 24-word seed phrase. But I wouldn't recommend intentionally doing a factory-reset if you can help it.
 
 ## Scenario 2 (Our Ledger hardware wallet was destroyed)
 
@@ -176,7 +196,7 @@ So, as soon as you can, you'll want to:
 
 # Decrypting the PIN
 
-1. Remember to unplug ethernet and totally disable wifi until after you've finished this entire process.
+1. Remember to "escape the internet". (Unplug the router, unplug ethernet cables, and totally disable wifi on your operating system until after you've finished this entire process.)
 2. Open the Terminal app on an Ubuntu computer (MacOs might work too).
 3. Paste in the following commands:
 
@@ -252,7 +272,7 @@ time base32 -d encrypted_message.txt | \
 11. You can connect to the internet again.
 12. Remember to shred the paper(s) where you wrote any secrets.
 
-## Commands Ryan used to encrypt the PIN:
+## Ryan's notes to self (commands Ryan used to encrypt the PIN):
 
 ```bash
 # This is the file where I write the plaintext PIN temporarily:
